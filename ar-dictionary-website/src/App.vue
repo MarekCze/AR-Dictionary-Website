@@ -1,30 +1,44 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <head>
+      <meta charset="utf-8">
+      <title>Marek Czerniejewski</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <header>
+      <Navigation></Navigation>
+    </header>
   </div>
   <router-view />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
+<script>
+import Navigation from '@/components/Navigation';
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  data: () => {
+    return {
+      mobile: false
     }
-  }
+  },
+    components: {
+        Navigation
+    },
+    created() {
+
+    },
+    mounted() {
+
+    },
+    methods: {
+
+      }
 }
+</script>
+
+
+<style lang="scss">
+@import 'assets/css/style.scss'
 </style>

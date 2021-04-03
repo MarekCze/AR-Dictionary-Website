@@ -1,0 +1,34 @@
+<template>
+    <div id="app-guide-wrapper">
+        <h1>How It Works</h1>
+        <div id="hit-step1">
+            <div id="step1">
+                <h2>1.</h2>
+            </div>
+            <p>Point your phone at the page and tap on the word you would like to look up.</p>
+        </div>
+        <div id="hit-step2">
+            <div id="step2">
+                <h2>2.</h2>
+            </div>
+            <p>Read the definition of the word and optionally take a look at the example sentences
+                and similar words that give the word more context. You can also tap on the audio button
+                in the upper right corner to hear the pronunciation of the word.
+            </p>
+        </div>
+        <div id="hit-step3">
+            <div id="step3">
+                <h2>3.</h2>
+            </div>
+            <p>Notebooks organize your searches by date. All you have to do to refresh your memory is
+                check the notebook with the correct date.
+            </p>
+        </div>
+        <div id="hit-step4">
+            <div id="step4">
+                <h2>4.</h2>
+            </div>
+            <p>Browse all searches in a notebook. All searches are colour coded to match their respective notebook.</p>
+        </div>
+    </div>
+</template>
