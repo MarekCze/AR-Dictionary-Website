@@ -1,13 +1,13 @@
 <template>
     <div>
         <button class="google-btn" v-on:click="googleSignIn()">Sign In With Google</button>
-        <button class="email-btn" v-on:click="googleSignIn()">Sign In With Email</button>
+        <button class="email-btn" v-on:click="changeAuthType('email')">Sign In With Email</button>
     </div>
 </template>
 
 <script>
 
-import firebase from "firebase";
+import firebase from "firebase"
 
 export default {
   name: "AuthComponent",
