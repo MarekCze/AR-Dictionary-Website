@@ -33,9 +33,9 @@ export default {
                 //let token = credential.accessToken
                 let user = result.user
 
-                this.$store.commit("setUser", user)
                 this.$store.commit("setLoggedIn", true)
-                this.$router.push({ name: 'Home', query: { redirect: '/' } });
+                this.$store.dispatch("fetchUserDocument", user.uid)
+                this.$router.push({ name: 'Home', query: { redirect: '/' } })
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;
