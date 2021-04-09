@@ -6,6 +6,7 @@ const store = createStore({
     authType: 'auth',
     userDocument: {},
     notebooks: [],
+    words: [],
     isLoggedIn: false,
   },
   mutations: {
@@ -22,16 +23,18 @@ const store = createStore({
     },
     setUserNotebooks(state, notebooks) {
       state.notebooks = notebooks
+    },
+    setNotebookWords(state, words) {
+      state.words = words
     }
   },
   actions: {
-    async fetchUserDocument(state, uid) {
+    async fetchUserDocument({commit}, uid) {
       const userDocument = await fb.userCollection.doc(uid).get()
 
-      this.commit("setUserDocument", userDocument)
-      console.log(state.userDocument.id)
+      commit("setUserDocument", userDocument)
     },
-    async fetchUserNotebooks(state, uid) {
+    async fetchUserNotebooks({commit}, uid) {
       fb.userCollection.doc(uid).collection('Notebooks').orderBy('dateModified', 'desc').onSnapshot(snapshot => {
         let notebookArray = []
 
@@ -42,7 +45,21 @@ const store = createStore({
           notebookArray.push(notebook)
         })
         console.log(notebookArray)
-        this.commit("setUserNotebooks", notebookArray)
+        commit("setUserNotebooks", notebookArray)
+      })
+    },
+    async fetchNotebookWords({commit, state}, notebookId) {
+      fb.userCollection.doc(state.userDocument.id).collection('Notebooks').doc(notebookId).collection('Words').onSnapshot(snapshot => {
+        let wordArray = []
+
+        snapshot.forEach(doc => {
+          let word = doc.data()
+          word.id = doc.id
+          console.log(doc)
+          wordArray.push(word)
+        })
+        console.log(wordArray)
+        commit("setNotebookWords", wordArray)
       })
     }
   },

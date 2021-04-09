@@ -1,12 +1,12 @@
 <template>
-    <NotebookComponent/>
+    <NotebooksComponent/>
 </template>
 
 <script>
-import NotebookComponent from '@/components/NotebookComponent'
+import NotebooksComponent from '@/components/NotebooksComponent'
 
 export default {
     name: 'Notebooks',
-    components: { NotebookComponent }
+    components: { NotebooksComponent }
 }
 </script>

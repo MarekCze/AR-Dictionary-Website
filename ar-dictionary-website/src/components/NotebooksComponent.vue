@@ -1,7 +1,9 @@
 <template>
     <div class="notebook-wrapper">
-        <div class="notebook">
-            {{notebook}}
+        <div class="notebook" v-for="(notebook, index) in notebooks" :key="index">
+            <router-link :to="{ name: 'Notebook', params: {notebookId: notebook.uid}}">
+                {{notebook.name}}
+            </router-link>
         </div>
     </div>
 </template>
@@ -9,14 +11,14 @@
 <script>
 
 export default {
-    name: 'NotebookComponent',
+    name: 'NotebooksComponent',
     data () {
         return {
-            notebooks: []
+
         }
     },
     computed: {
-        notebook () {
+        notebooks () {
             return this.$store.state.notebooks
         }
     },
@@ -24,12 +26,12 @@ export default {
         async fetchNotebooks () {
             console.log("this.user")
             let response = await this.$store.dispatch("fetchUserNotebooks", this.$store.getters.getUserDocument.id)
-            
+
             return response
         }
     },
-    mounted () {
-        this.notebooks = this.fetchNotebooks()
+    created () {
+        this.fetchNotebooks()
     }
 }
 </script>
