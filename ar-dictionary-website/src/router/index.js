@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import SignIn from "../views/SignIn.vue";
 import Notebooks from "../views/Notebooks.vue";
 import Notebook from "../views/Notebook.vue";
+import EmailAuthComponent from "../components/authentication/EmailAuthComponent.vue";
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     path: "/SignIn",
     name: "SignIn",
     component: SignIn,
+  },
+  {
+    path: "/EmailSignIn",
+    name: "EmailSignIn",
+    component: EmailAuthComponent,
   },
   {
     path: "/notebooks",

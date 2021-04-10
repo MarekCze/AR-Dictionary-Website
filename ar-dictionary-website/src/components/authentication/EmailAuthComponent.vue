@@ -1,5 +1,6 @@
 <template>
     <div class="email-login">
+        <h1>Sign In</h1>
         <form class="login-form">
             <label for="emailInput">Email:</label>
             <input

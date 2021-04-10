@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="auth-div">
+        <h1>Sign In</h1>
         <button class="google-btn" v-on:click="googleSignIn()">Sign In With Google</button>
-        <button class="email-btn" v-on:click="changeAuthType('email')">Sign In With Email</button>
+        <button class="email-btn" @click="$router.push('EmailSignIn')">Sign In With Email</button>
     </div>
 </template>
 
