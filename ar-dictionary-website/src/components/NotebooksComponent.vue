@@ -2,8 +2,10 @@
     <div class="notebook-wrapper">
         <div class="notebook" v-for="(notebook, index) in notebooks" :key="index">
             <router-link :to="{ name: 'Notebook', params: {notebookId: notebook.uid}}">
-                <h2>{{notebook.name}}</h2>
-                <p>{{notebook.date}}</p>
+                <div class="notebook-inner-div" :class="notebook.style">
+                    <h2>{{notebook.name}}</h2>
+                    <p>{{notebook.date}}</p>
+                </div>    
             </router-link>
         </div>
     </div>

@@ -2,6 +2,12 @@ $main-blue: #77CDDE;
 $secondary-blue: #37808D;
 $main-green: #4AA17E;
 $secondary-green: #0C6448;
+$main-red:#DC4727;
+$secondary-red:#8B0602;
+$main-purple:#B563AD;
+$secondary-purple:#5F2595;
+$main-yellow:#F6C343;
+$secondary-yellow:#AE8603;
 
 body{
     margin: 0;
@@ -432,3 +438,155 @@ li.logo-li a:hover{
         }
     }
    }
+
+   /* ===========================================================================
+   =============================   NOTEBOOKS    =================================
+   ===========================================================================*/
+
+.notebook-wrapper{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1;
+
+    .notebook{
+        color: white;
+        height: 400px;
+        width: 45%;
+        margin: 10px;
+    
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        h2{
+            padding-left: 40px;
+            padding-top: 80px;
+        }
+
+        p{
+            padding-left: 40px;
+        }
+
+        .notebook-inner-div{
+            border-radius: 4px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .purple{
+            border-left: 3px solid $secondary-purple;
+            border-bottom: 3px solid $secondary-purple;
+            background-color: $main-purple;
+        }
+        
+        .red{
+            border-left: 3px solid $secondary-red;
+            border-bottom: 3px solid $secondary-red;
+            background-color: $main-red;
+        }
+        
+        .blue{
+            border-left: 3px solid $secondary-blue;
+            border-bottom: 3px solid $secondary-blue;
+            background-color: $main-blue;
+        }
+        
+        .green{
+            border-left: 3px solid $secondary-green;
+            border-bottom: 3px solid $secondary-green;
+            background-color: $main-green;
+        }
+        
+        .yellow{
+            border-left: 3px solid $secondary-yellow;
+            border-bottom: 3px solid $secondary-yellow;
+            background-color: $main-yellow;
+        }
+    }
+    
+    
+}
+
+/* ===========================================================================
+   =============================   WORDS    ==================================
+   ===========================================================================*/
+
+.word-wrapper{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+
+    .word{
+        border-radius: 8px;
+        border-left: 3px solid grey;
+        border-bottom: 3px solid grey;
+        border-top: 1px solid grey;
+        border-right: 1px solid grey;
+        margin: 10px;
+        padding: 0 40px 0 40px;
+
+        hr{
+            width: 100%;
+        }
+    }
+
+    .green{
+        hr{
+            color: $main-green;
+            background-color: $main-green;
+        }
+
+        h2{
+            color: $main-green;
+        }
+    }
+
+    .blue{
+        hr{
+            color: $main-blue;
+            background-color: $main-blue;
+        }
+
+        h2{
+            color: $main-blue;
+        }
+    }
+
+    .red{
+        hr{
+            color: $main-red;
+            background-color: $main-red;
+        }
+
+        h2{
+            color: $main-red;
+        }
+    }
+
+    .yellow{
+        hr{
+            color: $main-yellow;
+            background-color: $main-yellow;
+        }
+
+        h2{
+            color: $main-yellow;
+        }
+    }
+
+    .purple{
+        hr{
+            color: $main-purple;
+            background-color: $main-purple;
+        }
+
+        h2{
+            color: $main-purple;
+        }
+    }
+}
