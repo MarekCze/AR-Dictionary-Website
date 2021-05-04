@@ -1,6 +1,6 @@
 <template>
     <div id="download-app-wrapper">
-        <a href="@/assets/release/app-release-unsigned.apk">
+        <a href="https://drive.google.com/file/d/1R99dDCjGo5cPkITyUk2koBm1SO2Ku4Sb/view?usp=sharing">
             <img src="@/assets/img/logo/logoBlue.png" alt="logo">
         </a>
         <h1>Download the app!</h1>
